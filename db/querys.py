@@ -5,7 +5,7 @@ import os
 load_dotenv()
 
 connection = psycopg2.connect(
-    host=os.getenv("HOST"),
+    host=os.getenv("DB_HOST", "localhost"),
     database=os.getenv("DATABASE"),
     user=os.getenv("USER"),
     password=os.getenv("PASSWORD")
